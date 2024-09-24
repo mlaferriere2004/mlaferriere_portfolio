@@ -1,0 +1,43 @@
+/* ==========================================================================
+   carousel / component
+   ========================================================================== */
+
+.swiper-pagination-bullets {
+    display: flex;
+    justify-content: center;
+    position: static;
+    margin: 15px 0;
+}
+.swiper-pagination-bullet {
+    --size: 20px;
+
+    border: 2px solid var(--color-interaction);
+    border-radius: 100%;
+    height: var(--size);
+    margin: 0 5px;
+    transition: border 0.4s ease-out;
+    width: var(--size);
+    color: var(--color-primary);
+    opacity: 100%;
+}
+
+.swiper-pagination-bullet-active {
+    border-width: calc(var(--size, 20px) / 2);
+    color: var(--color-primary);
+}
+
+.swiper-slide {
+    img {
+        max-height: 60vh;
+        object-fit: cover;
+        width: 100%;
+        display: block;
+    }
+
+    p {
+        color: var(--color-white);
+        background-color: var(--color-primary);
+        margin: 0;
+        padding: 30px;
+    }
+}

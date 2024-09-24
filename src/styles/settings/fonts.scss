@@ -1,0 +1,17 @@
+/* ==========================================================================
+   FONTS / SETTINGS
+   ========================================================================== */
+/// Font family
+:root {
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Fira Code', monospace;
+
+    --font-size-content: #{typo(16px, 18px)};
+
+    /// Grosseur des textes
+
+    --font-size-h1: #{typo(50px, 100px)};
+    --font-size-h2: #{typo(25px, 50px)};
+
+    --font-size-logo: #{typo(28px, 42px)};
+}
