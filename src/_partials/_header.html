@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TITRE DU SITE</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manjari:wght@100;400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css" />
 
     <script>
@@ -17,19 +20,24 @@
   <body>
 
     <header class="header" data-component="Header">
-      <a href="index.html" class="header__brand">
-        Recettes e.tim
+      <a href="#" class="header__brand">
+        <svg class="icon icon--xl">
+          <use xlink:href="#icon-logo"></use>
+        </svg>
       </a>
       <nav class="nav-primary">
         <ul class="nav__menu">
             <li>
-                <a href="index.html" class="nav-primary__item">Acceuil</a>
+                <a href="#" class="nav-primary__item">Accueil</a>
             </li>
             <li>
-                <a href="Recettes.html" class="nav-primary__item">Nos Recettes</a>
+                <a href="#" class="nav-primary__item">À propos</a>
             </li>
             <li>
-                <a href="#" class="nav-primary__item">Contacte</a>
+              <a href="#" class="nav-primary__item">Projets</a>
+          </li>
+            <li>
+                <a href="#" class="nav-primary__item">Contact</a>
             </li>
         </ul>
      </nav>

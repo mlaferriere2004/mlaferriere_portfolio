@@ -8,12 +8,26 @@
     --color-black: #000;
 
     // Couleurs du projet
-    --color-primary: #2d2d2d;
-    --color-bg-primary: #e2e2e2;
+    --color-primary: #edeef5;
+    --color-bg-primary: #2a2f51;
+    --color-lines: #000422;
+
+    --color-lines-alpha: rgb(0, 4, 34, 0%);
+    --color-gradient-project: linear-gradient(
+        90deg,
+        var(--color-lines) 70%,
+        var(--color-lines-alpha) 100%
+    );
+
+    --color-gradient-one: var(--color-lines);
+    --color-gradient-two: rgb(4, 58, 91, 50%);
+    --color-menu-gradient: linear-gradient(
+        var(--color-gradient-one),
+        var(--color-gradient-two)
+    );
+    --color-menu: rgb(4, 58, 91, 100%);
 
     //Couleurs des call to action
-    --color-interaction: orange;
-
-    //Couleur icone
-    --color-heart: #f24e1e;
+    --color-button: #ffdc50;
+    --color-interaction: #ff6b00;
 }
