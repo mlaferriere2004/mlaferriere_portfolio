@@ -9,7 +9,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
-    padding: 25px var(--spacing-xl);
+    padding: 25px var(--spacing-md);
     width: 100%;
     z-index: 10;
     position: sticky;
@@ -18,11 +18,6 @@
     transition: all 0.4s $ease-out-expo;
 
     @media screen and (min-width: $breakpoint-md) {
-        padding: 25px var(--spacing-xl);
-        //justify-content: center;
-    }
-
-    @media screen and (max-width: $breakpoint-xs) {
         padding: 25px var(--spacing-xl);
     }
 
@@ -34,7 +29,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: 2;
+        z-index: 10;
     }
 
     .header-is-hidden.is-scrolling-down & {
@@ -49,7 +44,8 @@
     font-family: var(--font-primary);
     font-weight: bold;
     font-size: var(--font-size-logo);
-    color: var(--color-white);
+    color: var(--color-primary);
+    transition: all 0.4s $ease-out-expo;
 
     @media screen and (min-width: $breakpoint-md) {
         //position: absolute;
@@ -69,6 +65,7 @@
     position: relative;
     display: block;
     text-align: center;
+    transition: all 0.4s $ease-out-expo;
 
     &.emphasis {
         color: var(--color-interaction);
@@ -194,7 +191,6 @@
 }
 
 .nav-primary {
-    //background-color: var(--color-primary); background color of nav = background color of mobile menu
     position: absolute;
     top: 0;
     left: 0;
