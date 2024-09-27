@@ -17,14 +17,23 @@ h6 {
 h1 {
     font-size: var(--font-size-h1);
     line-height: 1;
+    @media screen and (max-height: calc($breakpoint-sm)) {
+        font-size: calc(var(--font-size-h1) * 0.9);
+    }
 }
 
 h2 {
     font-size: var(--font-size-h2);
+    @media screen and (max-height: calc($breakpoint-sm)) {
+        font-size: calc(var(--font-size-h2) * 0.8);
+    }
 }
 
 h3 {
     font-size: var(--font-size-h3);
+    @media screen and (max-height: calc($breakpoint-sm)) {
+        font-size: calc(var(--font-size-h3) * 0.8);
+    }
 }
 
 h4 {

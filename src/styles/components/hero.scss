@@ -4,6 +4,9 @@
     position: relative;
     top: 0;
     margin-top: calc(var(--spacing-xl) * -1);
+    @media screen and (max-height: calc($breakpoint-sm)) {
+        margin-top: 0;
+    }
 
     .wrapper {
         justify-content: center;
@@ -16,6 +19,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        max-width: 1920px;
 
         :nth-child(1) {
             font-weight: 300;
@@ -37,5 +41,8 @@
             font-weight: 300;
             align-self: flex-end;
         }
+    }
+
+    .shapes {
     }
 }
