@@ -1,58 +1,101 @@
 footer {
-    background-color: var(--color-primary);
-    padding: 25px 0;
-    .wrapper {
+    padding: var(--spacing-lg) 0;
+
+    .informations {
+        .coordinates {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-md);
+            padding: calc(var(--spacing-lg) * 2) 0;
+
+            a {
+                transition: all 0.4s $ease-out-expo;
+            }
+
+            .download_resume {
+                transition: all 0.4s $ease-out-expo;
+                font-size: var(--font-size-h4);
+                color: var(--color-button);
+                width: fit-content;
+                border-bottom: 3px solid var(--color-button);
+                &:hover {
+                    color: var(--color-interaction);
+                    border-bottom: 3px solid var(--color-interaction);
+                }
+            }
+
+            :nth-child(2) {
+                margin-bottom: -40px;
+            }
+            :nth-child(3) {
+                margin-bottom: -20px;
+            }
+        }
+    }
+
+    .copyright_and_socials {
         color: var(--color-white);
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
 
-    .copyright {
-        margin: 0;
-    }
-
-    .socials {
-        ul {
-            display: flex;
-            gap: 15px;
-            list-style: none;
+        .copyright {
             margin: 0;
         }
 
-        .social_link {
-            background-color: var(--color-white);
-            display: block;
-            height: 100%;
-            width: 100%;
-            overflow: hidden;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .socials {
+            transition: all 0.5s $ease-out-expo;
+            ul {
+                display: flex;
+                gap: var(--spacing-md);
+                list-style: none;
+                margin: 0;
+            }
 
-            &:hover {
-                background-color: var(--color-interaction);
+            .social_link {
+                transition: all 0.4s $ease-out-expo;
+                background-color: var(--color-white);
+                display: block;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    background-color: var(--color-interaction);
+                    .icon {
+                        color: var(--color-primary);
+                    }
+                }
+
                 .icon {
+                    color: var(--color-lines);
+                }
+            }
+
+            .social {
+                height: 70px;
+                width: 70px;
+            }
+
+            .icon {
+                transition: all 1s $ease-out-expo;
+                color: var(--color-primary);
+
+                &:hover {
                     color: var(--color-white);
                 }
             }
 
-            .icon {
-                color: var(--color-primary);
-            }
-        }
+            svg {
+                transform: rotate(-360deg);
 
-        .social {
-            height: 30px;
-            width: 30px;
-        }
-
-        .icon {
-            color: var(--color-primary);
-
-            &:hover {
-                color: var(--color-white);
+                &:hover {
+                    transform: rotate(0deg);
+                }
             }
         }
     }
