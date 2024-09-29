@@ -32,3 +32,71 @@
         font-weight: bold;
     }
 }
+
+.button_contact {
+    aspect-ratio: 1/1;
+    max-width: 425px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 10px dashed var(--color-interaction);
+    transition: all 0.5s $ease-out-expo;
+
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        width: 100%;
+        max-width: 400px;
+        border-radius: 50%;
+        background-color: var(--color-button);
+        border: 10px solid var(--color-lines);
+        color: var(--color-interaction);
+        transition: all 0.5s $ease-out-expo;
+        padding: var(--spacing-sm);
+
+        animation-name: spin-reversed;
+        animation-duration: 10000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes spin-reversed {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        &:hover {
+            //style:hover
+            background-color: var(--color-interaction);
+            border: solid 1px var(--color-lines);
+            color: var(--color-primary);
+
+            //font-style:hover
+            font-size: calc(var(--font-size-button) * 1.4);
+            font-weight: bold;
+        }
+
+        .button_contact {
+        }
+    }
+}

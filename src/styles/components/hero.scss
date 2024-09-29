@@ -47,3 +47,31 @@
     .shapes {
     }
 }
+
+.hero_project {
+    height: 95vh;
+    overflow: hidden;
+    position: relative;
+    top: 0;
+    margin-top: calc(var(--spacing-xl) * -1);
+
+    @media screen and (max-height: calc($breakpoint-sm)) {
+        margin-top: 0;
+    }
+
+    .wrapper {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        gap: var(--spacing-md);
+
+        h1 {
+            font-size: var(--font-size-titres-liste);
+        }
+
+        .hero_content {
+            max-width: 865px;
+        }
+    }
+}
