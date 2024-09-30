@@ -1,0 +1,30 @@
+.introProject {
+    --margin-left: 100px;
+    padding: var(--spacing-xl) 0;
+    .context {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-left: calc(var(--margin-left) * 2);
+        padding-bottom: var(--spacing-sm);
+    }
+
+    .video {
+        margin-left: var(--margin-left);
+    }
+}
+
+.sectionTitle {
+    margin-left: var(--margin-left);
+    position: relative;
+}
+
+.circle {
+    background-color: var(--color-lines);
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: -100px;
+    top: -50px;
+    z-index: -1;
+    border-radius: 50%;
+}
