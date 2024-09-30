@@ -1,7 +1,7 @@
 //import Scrolly from './components/Scrolly';
 import Carousel from './components/Carousel';
 import Header from './components/Header';
-//import YouTube from './components/YouTube';
+import YouTube from './components/YouTube';
 //import Form from './components/Form';
 //import Accordeon from './components/Accordeon';
 
@@ -11,7 +11,7 @@ export default class ComponentFactory {
       //Scrolly,
       Carousel,
       Header,
-      //YouTube,
+      YouTube,
       //Form,
       //Accordeon,
     };

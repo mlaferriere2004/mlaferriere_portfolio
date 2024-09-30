@@ -58,13 +58,18 @@
         }
     }
 
+    &:hover {
+        border: 0px dashed var(--color-interaction);
+    }
+
     a {
         display: flex;
         align-items: center;
         justify-content: center;
         aspect-ratio: 1/1;
         width: 100%;
-        max-width: 400px;
+        max-width: 425px;
+        max-height: 425px;
         border-radius: 50%;
         background-color: var(--color-button);
         border: 10px solid var(--color-lines);
@@ -95,9 +100,6 @@
             //font-style:hover
             font-size: calc(var(--font-size-button) * 1.4);
             font-weight: bold;
-        }
-
-        .button_contact {
         }
     }
 }

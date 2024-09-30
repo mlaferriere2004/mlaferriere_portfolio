@@ -1,11 +1,13 @@
 footer {
-    padding: var(--spacing-lg) 0;
+    position: relative;
+    padding: calc(var(--spacing-lg) * 2) 0 var(--spacing-lg) 0;
     overflow: hidden;
 
     .informations {
         display: flex;
         gap: calc(var(--spacing-md) * 2);
         align-items: flex-end;
+        justify-content: space-between;
 
         @media screen and (max-width: calc($breakpoint-lg)) {
             flex-direction: column;
@@ -48,10 +50,8 @@ footer {
 
         .button_and_arrows {
             display: flex;
-            max-width: 100%;
             gap: var(--spacing-lg);
             padding: calc(var(--spacing-lg) * 1.4) 0;
-            justify-content: space-between;
 
             img {
                 display: block;
@@ -130,5 +130,12 @@ footer {
                 }
             }
         }
+    }
+
+    .blob_footer {
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        right: 0;
     }
 }
