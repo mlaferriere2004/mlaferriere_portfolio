@@ -11,7 +11,7 @@
 .swiper-pagination-bullet {
     --size: 20px;
 
-    border: 2px solid var(--color-interaction);
+    border: 2px solid var(--color-button);
     border-radius: 100%;
     height: var(--size);
     margin: 0 5px;
@@ -19,11 +19,13 @@
     width: var(--size);
     color: var(--color-primary);
     opacity: 100%;
+    background-color: var(--color-lines);
 }
 
 .swiper-pagination-bullet-active {
     border-width: calc(var(--size, 20px) / 2);
     color: var(--color-primary);
+    background-color: var(--color-lines);
 }
 
 .swiper-slide {

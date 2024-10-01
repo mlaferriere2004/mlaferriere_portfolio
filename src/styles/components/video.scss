@@ -19,8 +19,16 @@
         width: 100%;
     }
 
+    .js-poster {
+        filter: grayscale(70%);
+
+        &:hover {
+            filter: grayscale(0%);
+        }
+    }
+
     .icon {
-        color: var(--color-interaction);
+        color: var(--color-button);
         opacity: 0;
         position: absolute;
         top: 50%;
@@ -29,20 +37,19 @@
         transition: 0.4s $ease-out-expo;
         transition-property: opacity, transform;
         transform-origin: 0 0;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -25%);
         z-index: 2;
         max-height: 30%;
         max-width: 20%;
         object-fit: contain;
 
         .is-video-ready & {
-            opacity: 0.25;
+            opacity: 0.5;
         }
     }
 
     &:hover .icon {
-        //transform: translate(1%, -50%);
-        //filter: hue-rotate(180deg);
+        transform: translate(-50%, -50%);
         opacity: 1;
     }
 }

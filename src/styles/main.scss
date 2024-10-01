@@ -29,14 +29,14 @@
 // C’est là que la majorité de mon travail a lieu.
 @import 'components/icons';
 @import 'components/buttons';
-//@import '../../node_modules/swiper/swiper-bundle';
+@import '../../node_modules/swiper/swiper-bundle';
 
-//@import 'components/carousel.scss';
+@import 'components/carousel';
 @import 'components/video';
-@import 'components/header.scss';
-@import 'components/hero.scss';
-@import 'components/projet.scss';
-@import 'components/footer.scss';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/projet';
+@import 'components/footer';
 
 // UTILITIES
 // Utilitaires et classes auxiliaires avec possibilité de remplacer tout ce qui précède, par exemple masquer les éléments de la page
