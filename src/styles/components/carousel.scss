@@ -6,10 +6,11 @@
     display: flex;
     justify-content: center;
     position: static;
-    margin: 15px 0;
+    margin: calc(var(--spacing-xl) - 50px) 0 var(--spacing-xl) 0;
+    gap: var(--spacing-md);
 }
 .swiper-pagination-bullet {
-    --size: 20px;
+    --size: 30px;
 
     border: 2px solid var(--color-button);
     border-radius: 100%;
@@ -29,17 +30,71 @@
 }
 
 .swiper-slide {
+    --slide-height: 700px;
+
+    display: flex;
+    gap: var(--spacing-md);
+    height: var(--slide-height);
+
+    .slide_content {
+        margin-left: var(--margin-left);
+        max-width: var(--slide-height);
+    }
+
     img {
-        max-height: 60vh;
+        max-height: 700px;
         object-fit: cover;
         width: 100%;
+        height: 100%;
         display: block;
+        border-radius: 15px;
     }
 
     p {
-        color: var(--color-white);
-        background-color: var(--color-primary);
+        color: var(--color-primary);
         margin: 0;
-        padding: 30px;
+        padding: 30px 0;
+    }
+
+    .bullet_point {
+        --bullet-size: 30px;
+
+        display: flex;
+        gap: calc(var(--spacing-md) + var(--bullet-size));
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .bullet {
+            position: relative;
+            width: var(--bullet-size);
+            height: var(--bullet-size);
+
+            .icon-star {
+                color: var(--color-highlight);
+                z-index: -1;
+                width: 33%;
+                height: 33%;
+                top: 15px;
+                left: 15px;
+            }
+        }
+
+        svg {
+            position: absolute;
+            max-height: var(--bullet-size);
+            width: var(--bullet-size);
+            top: 0;
+            left: 0;
+            use {
+                width: var(--bullet-size);
+            }
+        }
+    }
+
+    &:hover .icon-star {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
     }
 }
