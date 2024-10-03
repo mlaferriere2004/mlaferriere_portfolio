@@ -1,0 +1,71 @@
+.bullet_point {
+    --bullet-size: 30px;
+
+    display: flex;
+    gap: calc(var(--spacing-md) + var(--bullet-size));
+    flex-direction: row-reverse;
+    align-items: center;
+
+    .bullet {
+        position: relative;
+        width: calc(var(--bullet-size) + 50px);
+        max-width: calc(var(--bullet-size) + 50px);
+        height: var(--bullet-size);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-star {
+            transition: all 0.5s $ease-out-expo;
+            color: var(--color-highlight);
+            z-index: -1;
+            width: var(--bullet-size);
+            height: var(--bullet-size);
+            transform: scale(0%);
+            top: 15px;
+            left: 15px;
+        }
+
+        .icon-polygon {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &:hover .icon-star {
+        top: 0;
+        left: 0;
+        width: auto;
+        max-width: var(--bullet-size);
+        height: auto;
+        z-index: 1;
+        transform: scale(100%);
+    }
+
+    svg {
+        max-height: var(--bullet-size);
+        width: var(--bullet-size);
+        top: 0;
+        left: 0;
+        use {
+            width: var(--bullet-size);
+        }
+    }
+
+    &:hover .bullet {
+        animation-name: spin-star;
+        animation-duration: 2000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+
+        @keyframes spin-star {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
