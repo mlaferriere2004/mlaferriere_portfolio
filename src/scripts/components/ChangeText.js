@@ -22,7 +22,6 @@ export default class ChangeText {
   init() {
     console.log(this.texts.length);
     this.setInteraction();
-    //this.updateText();
   }
 
   //sets the click event for the element with the .text class
@@ -40,7 +39,13 @@ export default class ChangeText {
       this.state = 0;
     }
 
+    this.updateText();
     this.updateImg();
+  }
+
+  updateText() {
+    this.text_interaction[0].innerHTML = '';
+    this.text_interaction[0].innerHTML = this.texts[this.state];
   }
 
   updateImg() {
