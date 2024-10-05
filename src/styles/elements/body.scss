@@ -15,3 +15,8 @@ body {
 span {
     color: var(--color-highlight);
 }
+
+::selection {
+    background-color: var(--color-button);
+    color: var(--color-black);
+}

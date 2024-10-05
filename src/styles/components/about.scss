@@ -1,0 +1,38 @@
+.info {
+    --picture-height: 1000px;
+    margin: var(--spacing-xl) 0;
+
+    .about {
+        display: flex;
+        gap: var(--spacing-md);
+        position: relative;
+        height: var(--picture-height);
+
+        img {
+            max-width: 1000px;
+            max-height: var(--picture-height);
+            position: absolute;
+            right: calc((-1 * var(--spacing-xl)) / 1.1);
+            top: var(--spacing-md);
+        }
+
+        h2,
+        p {
+            max-width: calc(100% - calc(var(--picture-height) - 350px));
+        }
+
+        .grid_button_about {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            max-height: 200px;
+            height: 100%;
+            grid-template-areas: '. . . . . . . button . . . .';
+            margin-top: var(--spacing-xxl);
+        }
+
+        .button {
+            grid-area: button;
+            z-index: 2;
+        }
+    }
+}
