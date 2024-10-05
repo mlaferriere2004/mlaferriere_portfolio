@@ -2,7 +2,6 @@
     --picture-height: 1000px;
     --space-top: 150px;
     margin-bottom: var(--space-top);
-    overflow: hidden;
 
     .about {
         display: flex;
@@ -45,25 +44,72 @@
     .likes_and_abilities {
         padding-top: calc(var(--spacing-xxl) + calc(var(--button-size) / 2));
         position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 585px;
 
         p {
             margin: 0;
         }
 
         .abilities {
+            align-self: flex-end;
+            width: 100%;
+            overflow: hidden;
             img {
                 position: absolute;
-                right: calc(-1 * var(--spacing-xxxl));
+                right: calc(-1 * calc(var(--spacing-xxxl) / 2));
                 z-index: -1;
+                top: calc(var(--spacing-xl) / 1.5);
             }
         }
 
         .traits {
-            img {
+            margin-left: calc(var(--spacing-xl) - 30px);
+
+            .blob {
                 position: absolute;
-                left: calc(-1 * var(--spacing-xxxl));
                 z-index: -1;
+                bottom: calc(var(--spacing-xl) * -1.3);
+                left: calc(var(--spacing-xl) / -1);
             }
+
+            .batiment {
+                position: absolute;
+                z-index: -2;
+                left: calc(var(--spacing-xl) / -1);
+                top: var(--spacing-xxl);
+            }
+        }
+    }
+
+    .hobbies {
+        margin-top: var(--spacing-xxxl);
+        position: relative;
+
+        h4 {
+            margin-bottom: var(--spacing-md);
+        }
+
+        p {
+            font-size: var(--font-size-h2);
+            font-weight: bold;
+            font-family: var(--font-secondary);
+            margin: 0;
+        }
+
+        span {
+            color: var(--color-lines);
+            background-color: var(--color-secondary-pale);
+            font-size: calc(var(--font-size-h2) / 1.2);
+            padding-top: 45px;
+            cursor: pointer;
+        }
+
+        img {
+            position: absolute;
+            top: -135%;
+            left: 50%;
         }
     }
 }

@@ -4,6 +4,7 @@ import Header from './components/Header';
 import YouTube from './components/YouTube';
 //import Form from './components/Form';
 //import Accordeon from './components/Accordeon';
+import ChangeText from './components/ChangeText';
 
 export default class ComponentFactory {
   constructor() {
@@ -12,6 +13,7 @@ export default class ComponentFactory {
       Carousel,
       Header,
       YouTube,
+      ChangeText,
       //Form,
       //Accordeon,
     };

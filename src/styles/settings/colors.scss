@@ -11,11 +11,12 @@
     --color-primary: #edeef5;
     --color-bg-primary: #2a2f51;
     --color-lines: #000422;
+    --color-secondary-pale: #add1ea;
 
     --color-lines-alpha: rgb(0, 4, 34, 0%);
     --color-gradient-project: linear-gradient(
         90deg,
-        var(--color-lines) 40%,
+        var(--color-lines) 50%,
         var(--color-lines-alpha) 65%
     );
 

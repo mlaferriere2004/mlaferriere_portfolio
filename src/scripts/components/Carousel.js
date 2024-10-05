@@ -22,7 +22,7 @@ export default class Carousel {
 
   init() {
     this.setOptions();
-    console.log('Initialisation de ma composange Carousel');
+    console.log('Initialisation de ma composante Carousel');
     new Swiper(this.element, this.options);
   }
 
