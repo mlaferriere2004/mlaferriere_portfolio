@@ -1,6 +1,8 @@
 .info {
     --picture-height: 1000px;
-    margin: var(--spacing-xl) 0;
+    --space-top: 150px;
+    margin-bottom: var(--space-top);
+    overflow: hidden;
 
     .about {
         display: flex;
@@ -13,7 +15,11 @@
             max-height: var(--picture-height);
             position: absolute;
             right: calc((-1 * var(--spacing-xl)) / 1.1);
-            top: var(--spacing-md);
+            top: calc(var(--spacing-md) + var(--space-top));
+        }
+
+        h2 {
+            margin-top: var(--space-top);
         }
 
         h2,
@@ -24,7 +30,7 @@
         .grid_button_about {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            max-height: 200px;
+            max-height: var(--button-size);
             height: 100%;
             grid-template-areas: '. . . . . . . button . . . .';
             margin-top: var(--spacing-xxl);
@@ -33,6 +39,31 @@
         .button {
             grid-area: button;
             z-index: 2;
+        }
+    }
+
+    .likes_and_abilities {
+        padding-top: calc(var(--spacing-xxl) + calc(var(--button-size) / 2));
+        position: relative;
+
+        p {
+            margin: 0;
+        }
+
+        .abilities {
+            img {
+                position: absolute;
+                right: calc(-1 * var(--spacing-xxxl));
+                z-index: -1;
+            }
+        }
+
+        .traits {
+            img {
+                position: absolute;
+                left: calc(-1 * var(--spacing-xxxl));
+                z-index: -1;
+            }
         }
     }
 }

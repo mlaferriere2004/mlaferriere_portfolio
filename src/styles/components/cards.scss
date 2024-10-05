@@ -1,0 +1,17 @@
+.card_bullet_point {
+    background-color: var(--color-bg-primary);
+    border: 3px dashed var(--color-primary);
+    padding: var(--spacing-lg);
+    max-width: 815px;
+    border-radius: 50px;
+
+    h3 {
+        margin-bottom: -10px;
+        margin-top: 10px;
+    }
+
+    .border_title {
+        border: 3px solid var(--color-primary);
+        border-radius: 10px;
+    }
+}

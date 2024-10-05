@@ -2,13 +2,16 @@
     --bullet-size: 30px;
 
     display: flex;
-    gap: calc(var(--spacing-md) + var(--bullet-size));
+    gap: calc(var(--spacing-md));
     flex-direction: row-reverse;
     align-items: center;
 
+    p {
+        width: 100%;
+    }
+
     .bullet {
         position: relative;
-        width: calc(var(--bullet-size) + 50px);
         max-width: calc(var(--bullet-size) + 50px);
         height: var(--bullet-size);
         display: flex;

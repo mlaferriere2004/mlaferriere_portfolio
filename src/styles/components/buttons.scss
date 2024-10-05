@@ -1,7 +1,7 @@
 .button {
     //size and orientation:
     aspect-ratio: 1/ 1;
-    max-width: 200px;
+    max-width: var(--button-size);
     display: flex;
     justify-content: center;
     align-items: center;
