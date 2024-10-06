@@ -15,12 +15,9 @@ export default class ChangeText {
       .split(', ')
       .map((text) => text.trim());
     this.init();
-
-    console.log(this.img);
   }
 
   init() {
-    console.log(this.texts.length);
     this.setInteraction();
   }
 

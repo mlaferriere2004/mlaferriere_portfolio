@@ -24,6 +24,7 @@ h1 {
 
 h2 {
     font-size: var(--font-size-h2);
+    font-weight: 400;
     @media screen and (max-height: calc($breakpoint-sm)) {
         font-size: calc(var(--font-size-h2) * 0.8);
     }
