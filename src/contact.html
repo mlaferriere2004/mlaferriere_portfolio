@@ -1,5 +1,47 @@
 {% include '_partials/_header.html' %}
 
-<h1>le form ici tihi c:</h1>
+<section class="contact">
+    <div class="wrapper">
+        <form action="" class="form" autocomplete="off" data-component="Form">
+            <h2>Écrivez ici... 🖋️</h2>
+            <div class="form__body">
+                <fieldset class="grid">
+                    <div class="input">
+                        <label class="input__label" for="name">Nom complet:</label>
+                        <input class="input__element" type="text" name="name" id="name" required />
+                        <p class="error__message">Vous êtes qui déja?</p>
+                    </div>
+                    <div class="input max_width">
+                        <label class="input__label" for="email">Courriel:</label>
+                        <input class="input__element" type="email" name="email" id="email" required />
+                        <p class="error__message">Email pas valide :(</p>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <div class="input max_width">
+                        <label class="input__label" for="sujet">Sujet:</label>
+                        <input class="input__element" type="text" name="sujet" id="sujet" required />
+                        <p class="error__message">On parle de...?</p>
+                    </div>
+                    <div class="input textarea max_width">
+                        <label class="input__label" for="requete">Message:</label>
+                        <textarea class="input__element" name="requete" id="requete" required></textarea>
+                        <p class="error__message">Ben la, soyez pas gêner...</p>
+                    </div>
+                </fieldset>
+
+                <div class="form__footer">
+                    <button class="button">Envoyer</button>
+                </div>
+            </div>
+            <div class="form__confirmation">
+                <h2>Merci!</h2>
+                <h4>votre demande a bien été envoyer!</h4>
+            </div>
+        </form>
+    </div>
+    <img src="/assets/images/photoPro.png" alt="" />
+</section>
 
 {% include '_partials/_footer.html' %}

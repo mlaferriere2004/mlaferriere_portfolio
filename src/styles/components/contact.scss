@@ -1,0 +1,22 @@
+.contact {
+    padding: var(--spacing-xl) 0;
+    display: flex;
+    gap: var(--spacing-md);
+
+    .wrapper {
+        max-width: 50%;
+        margin-left: var(--spacing-xl);
+    }
+
+    img {
+        max-width: 40%;
+        object-fit: cover;
+        height: 50%;
+        margin-top: var(--spacing-lg);
+    }
+
+    .button {
+        margin-top: var(--spacing-lg);
+        width: 100%;
+    }
+}

@@ -1,0 +1,173 @@
+.form {
+    --input-radius: 15px;
+    --input-padding: 1em;
+
+    fieldset {
+        border: none;
+        padding: 0;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+
+        @media screen and (min-width: $breakpoint-md) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--spacing-md);
+        }
+    }
+}
+
+.form__footer {
+    display: flex;
+    //justify-content: flex-end;
+    //background-color: var(--color-bg-primary);
+}
+
+.form__body {
+    .is-sent & {
+        display: none;
+    }
+}
+
+.form__confirmation {
+    display: none;
+
+    .is-sent & {
+        display: block;
+        margin: var(--spacing-xxxl) 0;
+    }
+}
+
+.input__label {
+    display: block;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    margin-top: var(--spacing-sm);
+
+    @media screen and (min-width: $breakpoint-md) {
+        margin-top: 0;
+    }
+}
+
+.input__element {
+    border-radius: var(--input-radius);
+    background-color: var(--color-white);
+    border: none;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+    padding: var(--input-padding);
+    width: 100%;
+
+    &:-webkit-autofill,
+    &:-webkit-autofill:active {
+        -webkit-box-shadow: inset 0 0 0 30px var(--color-white) !important;
+        -webkit-text-fill-color: inherit !important;
+    }
+
+    //hover
+    &:hover,
+    + .input__label:hover::before {
+        background-color: var(--color-interaction);
+        -webkit-box-shadow: inset 0 0 0 30px var(--color-neutral-light) !important;
+    }
+
+    //focus
+    &:focus,
+    &:-webkit-autofill:focus,
+    &:focus + .input__label::before {
+        background-color: var(--color-interaction);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: inset 0 0 0 30px var(--color-interaction) !important;
+    }
+
+    //autocomplete
+    &::placeholder {
+        color: var(--color-neutral-dark);
+    }
+}
+
+/*
+   select
+   ========================================================================== */
+.select {
+    position: relative;
+    .input__element {
+        appearance: none;
+        padding-right: var(--spacing-md);
+
+        &:invalid {
+            color: var(--color-neutral-dark);
+        }
+    }
+
+    option {
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+
+    ::after {
+        --size: 12px;
+        content: '';
+        background: url('../assets/images/icon-chevron-down.svg') no-repeat 50%
+            50%;
+        background-size: 100%;
+        height: var(--size);
+        width: var(--size);
+        position: absolute;
+        right: var(--input-padding);
+        top: 50%;
+        transform: translateY(50%);
+        pointer-events: none;
+    }
+}
+
+/*
+   text area
+   ========================================================================== */
+
+.textarea {
+    .input__element {
+        grid-column: 1 / -1;
+        resize: vertical;
+        height: 300px;
+    }
+}
+
+/* ==========================================================================
+   error / 
+   ========================================================================== */
+
+.error {
+    --color-fail: rgb(201, 54, 34);
+
+    .input__element,
+    &.check .input__label::before,
+    &.radio .input__label::before,
+    .check .input__label::before,
+    .radio .input__label::before {
+        box-shadow: inset 0 0 0 5px var(--color-fail);
+    }
+
+    .input__label {
+        color: var(--color-fail);
+    }
+
+    .error__message {
+        color: var(--color-fail);
+        display: block;
+    }
+}
+
+/* ==========================================================================
+   error message / 
+   ========================================================================== */
+
+.error__message {
+    display: none;
+    margin: 0;
+    font-size: calc(var(--font-size-content) / 1.3);
+}
