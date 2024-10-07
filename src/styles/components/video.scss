@@ -42,6 +42,7 @@
         max-height: 30%;
         max-width: 20%;
         object-fit: contain;
+        pointer-events: none;
 
         .is-video-ready & {
             opacity: 0.5;

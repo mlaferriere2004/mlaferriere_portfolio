@@ -49,6 +49,15 @@
         width: 100%;
         top: 0;
         right: 0;
+        display: flex;
+        justify-content: flex-end;
+        z-index: -2;
+        video {
+            object-fit: cover;
+            width: 85%;
+            min-height: 100%;
+            filter: brightness(40%);
+        }
 
         img {
             object-fit: cover;
@@ -111,6 +120,13 @@
         width: 70%;
         top: 0;
         right: 0;
+
+        video {
+            height: 100%;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+        }
 
         img {
             object-fit: cover;
