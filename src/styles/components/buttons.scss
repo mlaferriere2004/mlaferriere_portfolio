@@ -2,9 +2,11 @@
     //size and orientation:
     aspect-ratio: 1/ 1;
     max-width: var(--button-size);
+    max-height: var(--button-size);
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 
     //style
     border-radius: 50%;
@@ -22,6 +24,16 @@
 
     //transition
     transition: all 0.5s $ease-out-expo;
+
+    @media screen and (max-width: $breakpoint-md) {
+        max-width: calc(var(--button-size) / 1.5);
+        max-height: calc(var(--button-size) / 1.5);
+    }
+
+    @media screen and (max-width: $breakpoint-xs) {
+        max-width: calc(var(--button-size) / 2);
+        max-height: calc(var(--button-size) / 2);
+    }
 
     &:hover {
         //style:hover

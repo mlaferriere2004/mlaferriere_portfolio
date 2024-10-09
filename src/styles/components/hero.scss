@@ -2,10 +2,6 @@
     height: 100vh;
     position: relative;
     top: 0;
-    margin-top: calc(var(--spacing-xl) * -1);
-    @media screen and (max-height: calc($breakpoint-sm)) {
-        margin-top: 0;
-    }
 
     .wrapper {
         justify-content: center;
@@ -13,6 +9,11 @@
         flex-direction: column;
         height: 100%;
         gap: var(--spacing-md);
+        margin-bottom: var(--spacing-xl);
+
+        @media screen and (max-width: $breakpoint-md) {
+            height: 50%;
+        }
     }
 
     .hero_content {
@@ -22,12 +23,17 @@
         max-width: 1700px;
         height: 100%;
 
-        :nth-child(1) {
-            align-self: flex-start;
+        .button_reel {
+            align-self: flex-end;
+            margin: var(--spacing-md) var(--spacing-md) 0 0;
+            display: none;
+
+            @media screen and (max-width: $breakpoint-md) {
+                display: flex;
+            }
         }
 
         :nth-child(2) {
-            //margin-left: calc(var(--spacing-xl) - 20px); <- a décommenter si flex marche pas
             align-self: center;
             margin-bottom: -25px;
             margin-top: 10px;
@@ -37,7 +43,6 @@
         }
 
         :nth-child(3) {
-            //margin-left: calc((var(--spacing-xl) - 20px) * 2); <- a décommenter si flex marche pas
             align-self: flex-end;
         }
     }
@@ -52,11 +57,18 @@
         display: flex;
         justify-content: flex-end;
         z-index: -2;
+        margin-top: calc(var(--spacing-xl) * -1);
+
         video {
             object-fit: cover;
             width: 85%;
             min-height: 100%;
             filter: brightness(40%);
+
+            @media screen and (max-width: $breakpoint-md) {
+                width: 100%;
+                filter: brightness(20%);
+            }
         }
 
         img {
@@ -71,6 +83,10 @@
         top: -150px;
         left: 0;
         z-index: -1;
+
+        @media screen and (max-width: $breakpoint-md) {
+            display: none;
+        }
     }
 }
 
@@ -79,11 +95,6 @@
     overflow: hidden;
     position: relative;
     top: 0;
-    margin-top: calc(var(--spacing-xl) * -1);
-
-    @media screen and (max-height: calc($breakpoint-sm)) {
-        margin-top: 0;
-    }
 
     h1 {
         font-size: var(--font-size-titres-liste);
@@ -120,6 +131,7 @@
         width: 70%;
         top: 0;
         right: 0;
+        margin-top: calc(var(--spacing-xl) * -1);
 
         video {
             height: 100%;

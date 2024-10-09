@@ -29,7 +29,6 @@
         .grid_button_about {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            max-height: var(--button-size);
             height: 100%;
             grid-template-areas: '. . . . . . . button . . . .';
             margin-top: var(--spacing-xxl);
@@ -86,6 +85,7 @@
     .hobbies {
         margin-top: var(--spacing-xxxl);
         position: relative;
+        user-select: none;
 
         h4 {
             margin-bottom: var(--spacing-md);
