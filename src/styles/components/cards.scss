@@ -2,7 +2,7 @@
     background-color: var(--color-bg-primary);
     border: 3px dashed var(--color-primary);
     padding: var(--spacing-lg);
-    max-width: 815px;
+    max-width: var(--cards-max-width);
     border-radius: 50px;
 
     h3 {
@@ -13,5 +13,9 @@
     .border_title {
         border: 3px solid var(--color-primary);
         border-radius: 10px;
+    }
+
+    @media screen and (max-width: $breakpoint-xs) {
+        padding: var(--spacing-md);
     }
 }

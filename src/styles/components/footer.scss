@@ -85,7 +85,7 @@ footer {
             }
 
             .social_link {
-                transition: all 0.4s $ease-out-expo;
+                transition: all 0.7s $ease-out-expo;
                 background-color: var(--color-white);
                 display: block;
                 height: 100%;
@@ -95,9 +95,11 @@ footer {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                transform: rotate(-360deg);
 
                 &:hover {
                     background-color: var(--color-interaction);
+                    transform: rotate(0deg);
                     .icon {
                         color: var(--color-primary);
                     }
@@ -119,14 +121,6 @@ footer {
 
                 &:hover {
                     color: var(--color-white);
-                }
-            }
-
-            svg {
-                transform: rotate(-360deg);
-
-                &:hover {
-                    transform: rotate(0deg);
                 }
             }
         }
