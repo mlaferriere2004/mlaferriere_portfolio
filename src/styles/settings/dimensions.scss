@@ -3,11 +3,13 @@
    ========================================================================== */
 
 // Valeurs utilisées pour les médias query
-$breakpoint-xs: 480px;
+$breakpoint-xxs: 480px;
+$breakpoint-xs: 550px;
 $breakpoint-sm: 768px;
 $breakpoint-md: 1110px;
 $breakpoint-lg: 1440px;
 $breakpoint-xl: 1650px;
+$breakpoint-xxl: 1755px;
 
 :root {
     --spacing-xs: 5px;

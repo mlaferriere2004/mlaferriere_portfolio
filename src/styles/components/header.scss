@@ -35,24 +35,14 @@
 
     .header-is-hidden.is-scrolling-down & {
         transform: translateY(-100%) translateY(5px);
-        //transform: translateX(-100%) translateX(4px);
     }
 }
 
 .header__brand {
     position: relative;
     z-index: 10;
-    //if Logo has text:
-    //font-family: var(--font-primary); if Logo has text
-    //font-weight: bold;
-    //font-size: var(--font-size-logo);
     color: var(--color-primary);
     transition: all 0.4s $ease-out-expo;
-
-    @media screen and (min-width: $breakpoint-md) {
-        //position: absolute;
-        //margin: auto;
-    }
 
     &:hover {
         text-decoration: none;

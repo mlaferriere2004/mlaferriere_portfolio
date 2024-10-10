@@ -7,14 +7,18 @@
         display: flex;
         gap: var(--spacing-md);
         position: relative;
-        height: var(--picture-height);
 
-        img {
-            max-width: 1000px;
+        .photo_absolute {
+            max-width: var(--picture-height);
             max-height: var(--picture-height);
             position: absolute;
             right: calc((-1 * var(--spacing-xl)) / 1.1);
             top: calc(var(--spacing-md) + var(--space-top));
+        }
+
+        .photo_inline {
+            max-height: var(--picture-height);
+            display: none;
         }
 
         h2 {
@@ -29,7 +33,7 @@
         .grid_button_about {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            height: 100%;
+            height: 20%;
             grid-template-areas: '. . . . . . . button . . . .';
             margin-top: var(--spacing-xxl);
         }
@@ -37,6 +41,79 @@
         .button {
             grid-area: button;
             z-index: 2;
+        }
+
+        @media screen and (max-width: $breakpoint-xxl) {
+            display: flex;
+            justify-content: center;
+
+            .about_content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    align-self: flex-start;
+                    padding-bottom: var(--spacing-lg);
+                }
+
+                .grid_button_about {
+                    grid-template-areas: 'button . . . . . . . . . . .';
+                    position: absolute;
+                    top: var(--spacing-xxxl);
+                    width: 100%;
+                    margin-top: 0;
+                }
+            }
+
+            h2,
+            p {
+                max-width: 100%;
+            }
+
+            p {
+                //copier coller du style des cartes
+                border: 3px dashed var(--color-primary);
+                padding: var(--spacing-lg);
+                max-width: 1200px;
+                border-radius: 50px;
+            }
+
+            .photo_absolute {
+                display: none;
+            }
+
+            .photo_inline {
+                display: block;
+            }
+        }
+
+        @media screen and (max-width: $breakpoint-xs) {
+            .photo_inline {
+                margin-right: calc(var(--spacing-xl) * -1.25);
+                margin-bottom: calc(var(--spacing-lg) * -2);
+            }
+
+            .about_content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h2 {
+                    margin-top: calc(var(--spacing-lg) * 2);
+                }
+
+                .grid_button_about {
+                    top: var(--spacing-xxl);
+                }
+            }
+
+            p {
+                //copier coller du style des cartes
+                border: 0px dashed var(--color-primary);
+                padding: var(--spacing-lg) 0;
+                border-radius: 0;
+            }
         }
     }
 

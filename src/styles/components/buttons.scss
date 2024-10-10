@@ -31,8 +31,8 @@
     }
 
     @media screen and (max-width: $breakpoint-xs) {
-        max-width: calc(var(--button-size) / 2);
-        max-height: calc(var(--button-size) / 2);
+        max-width: calc(var(--button-size) / 1.75);
+        max-height: calc(var(--button-size) / 1.75);
     }
 
     &:hover {
