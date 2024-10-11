@@ -71,4 +71,44 @@
             }
         }
     }
+
+    @media screen and (max-width: $breakpoint-md) {
+        .bullet {
+            position: relative;
+            max-width: calc(var(--bullet-size) + 50px);
+            height: var(--bullet-size);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .icon-star {
+                transition: all 0.5s $ease-out-expo;
+                color: var(--color-highlight);
+                z-index: -1;
+                width: var(--bullet-size);
+                height: var(--bullet-size);
+                transform: scale(100%);
+                top: 15px;
+                left: 15px;
+            }
+
+            .icon-polygon {
+                display: none;
+            }
+
+            animation-name: spin-star;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @keyframes spin-star {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
 }
