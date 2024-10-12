@@ -24,6 +24,10 @@
         var(--color-lines) 50%,
         var(--color-lines-alpha) 85%
     );
+    --color-gradient-project-list-mobile: linear-gradient(
+        var(--color-lines) 50%,
+        var(--color-lines-alpha) 85%
+    );
 
     --color-gradient-one: var(--color-lines);
     --color-gradient-two: rgb(4, 58, 91, 50%);
