@@ -5,7 +5,10 @@
 
     .wrapper {
         max-width: 50%;
-        margin-left: var(--spacing-xl);
+
+        @media screen and (max-width: $breakpoint-lg) {
+            max-width: 100%;
+        }
     }
 
     img {
@@ -13,10 +16,18 @@
         object-fit: cover;
         height: 50%;
         margin-top: var(--spacing-lg);
+
+        @media screen and (max-width: $breakpoint-lg) {
+            display: none;
+        }
     }
 
     .button {
         margin-top: var(--spacing-lg);
         width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding: var(--spacing-lg) 0;
     }
 }
