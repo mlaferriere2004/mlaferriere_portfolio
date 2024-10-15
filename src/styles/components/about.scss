@@ -259,12 +259,12 @@
                 padding: 10px var(--spacing-sm) 0 var(--spacing-sm);
             }
 
-            animation-name: changeColor;
+            animation-name: changeColorAbout;
             animation-duration: 2000ms;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
 
-            @keyframes changeColor {
+            @keyframes changeColorAbout {
                 0% {
                     color: var(--color-lines);
                     background-color: var(--color-secondary-pale);

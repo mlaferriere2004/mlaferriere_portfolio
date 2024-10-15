@@ -25,6 +25,10 @@
         &:hover {
             filter: grayscale(0%);
         }
+
+        @media screen and (max-width: $breakpoint-sm) {
+            filter: grayscale(0%);
+        }
     }
 
     .icon {
@@ -46,6 +50,11 @@
 
         .is-video-ready & {
             opacity: 0.5;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                opacity: 1;
+                transform: translate(-50%, -50%);
+            }
         }
     }
 

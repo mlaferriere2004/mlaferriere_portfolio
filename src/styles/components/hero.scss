@@ -109,6 +109,9 @@
         max-width: 1920px;
         height: 100%;
         background: var(--color-gradient-project);
+        @media screen and (max-width: $breakpoint-sm) {
+            background: rgb(0, 0, 0, 0);
+        }
 
         .wrapper {
             justify-content: center;
@@ -122,6 +125,14 @@
     .softwares {
         display: flex;
         gap: var(--spacing-md);
+
+        @media screen and (max-width: $breakpoint-sm) {
+            gap: var(--spacing-sm);
+
+            img {
+                max-width: 50px;
+            }
+        }
     }
 
     .text_project_hero {
@@ -131,7 +142,7 @@
     .hero_media {
         position: absolute;
         z-index: -1;
-        height: 100%;
+        height: calc(100% + var(--spacing-xl));
         width: 70%;
         top: 0;
         right: 0;
@@ -148,6 +159,11 @@
             object-fit: cover;
             width: 100%;
             min-height: 100%;
+        }
+
+        @media screen and (max-width: $breakpoint-sm) {
+            filter: brightness(20%);
+            width: 100%;
         }
     }
 }

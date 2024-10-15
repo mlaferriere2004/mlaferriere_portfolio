@@ -10,19 +10,53 @@
     .video {
         margin-left: var(--margin-left);
     }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: var(--spacing-lg) 0 var(--spacing-xl) 0;
+
+        .context {
+            margin-left: 0;
+        }
+
+        .video {
+            margin-left: 0;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-xs) {
+        .context {
+            flex-direction: column;
+            margin-bottom: var(--spacing-md);
+
+            p {
+                margin: 0;
+            }
+        }
+    }
 }
 
 .sectionTitle {
     margin-left: var(--margin-left);
     position: relative;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-left: 0;
+    }
 }
 
 .steps {
+    h3 {
+        margin: var(--spacing-sm) 0;
+    }
     .wrapper {
         position: relative;
         .circle {
             left: 0px;
             top: -75px;
+
+            @media screen and (max-width: $breakpoint-sm) {
+                top: -25px;
+            }
         }
     }
 }
@@ -36,6 +70,13 @@
     top: -50px;
     z-index: -1;
     border-radius: 50%;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        top: -25px;
+        left: 0;
+        height: 100px;
+        width: 100px;
+    }
 }
 
 .disclaimer_content {

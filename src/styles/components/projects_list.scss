@@ -22,10 +22,11 @@
         .wrapper {
             max-width: 1740px;
             width: 100%;
+            margin-right: 0;
         }
 
         ul {
-            padding-left: 15%;
+            padding-left: var(--spacing-md);
 
             @media screen and (max-width: $breakpoint-md) {
                 padding-left: 0;
@@ -72,6 +73,7 @@
 
                 img {
                     opacity: 70%;
+                    border-radius: 0;
                 }
             }
 
