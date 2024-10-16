@@ -1,4 +1,4 @@
-//import Scrolly from './components/Scrolly';
+import Scrolly from './components/Scrolly';
 import Carousel from './components/Carousel';
 import Header from './components/Header';
 import YouTube from './components/YouTube';
@@ -10,7 +10,7 @@ import Modale from './components/Modale';
 export default class ComponentFactory {
   constructor() {
     this.componentList = {
-      //Scrolly,
+      Scrolly,
       Carousel,
       Header,
       YouTube,

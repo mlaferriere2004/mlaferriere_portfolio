@@ -3,7 +3,7 @@
 <section id="home" class="hero">
     <div class="hero_content">
         <a href="youtube.com" class="button button_reel">Voir Reel</a>
-        <div class="wrapper">
+        <div class="wrapper" data-scrolly="fromLeft">
             <h3>Portfolio de</h3>
             <h1>Mikaël Laferrière</h1>
             <h3>Apprenti Intégrateur web et Créateur média</h3>
@@ -29,23 +29,23 @@
     <div class="wrapper">
         <div class="about">
             <div class="about_content">
-                <h2>Qui suis-je?</h2>
-                <img src="/assets/images/photoPro.png" alt="" class="photo_inline" />
-                <p>
+                <h2 data-scrolly="fromLeft">Qui suis-je?</h2>
+                <img src="/assets/images/photoPro.png" alt="" class="photo_inline" data-scrolly="fromRight" />
+                <p data-scrolly="fromLeft">
                     Salut, bonjour, bonsoir! Je suis <span>Mikaël Laferrière, une âme passionée</span> qui souhaite
                     aider à <span>créer des choses merveilleuses</span> en ce monde d’asphalte et de batiments gris
                     (Longueuil), parce qu’on peut <span>toujours avoir un peu plus de fun dans la vie!</span> J’aime à
                     peu près tout (sauf le brocoli), et j’adore partager ma <span>joie de vivre</span> avec les autres.
                     J’espère vous rencontrez bientôt et qu’on pourra bien s’entendre, vous et moi :)
                 </p>
-                <div class="grid_button_about">
+                <div class="grid_button_about" data-scrolly="fromBottom">
                     <a href="#projects" class="button">Projets</a>
                 </div>
             </div>
-            <img src="/assets/images/photoPro.png" alt="" class="photo_absolute" />
+            <img src="/assets/images/photoPro.png" alt="" class="photo_absolute" data-scrolly="fromRight" />
         </div>
         <div class="likes_and_abilities">
-            <div class="card_bullet_point abilities">
+            <div class="card_bullet_point abilities" data-scrolly="fromRight">
                 <h3>Ce que je fait</h3>
                 <hr class="border_title" />
                 <div class="bullet_point">
@@ -92,9 +92,8 @@
                         </svg>
                     </div>
                 </div>
-                <img src="/assets/images/blob_abilities.png" alt="" class="blob" />
             </div>
-            <div class="card_bullet_point traits">
+            <div class="card_bullet_point traits" data-scrolly="fromLeft">
                 <h3>Ce que je suis</h3>
                 <hr class="border_title" />
                 <div class="bullet_point">
@@ -141,14 +140,16 @@
                         </svg>
                     </div>
                 </div>
-                <img src="/assets/images/blob_traits.png" alt="" class="blob" />
-                <img src="/assets/images/gifBatiment.gif" alt="" class="batiment" />
             </div>
+            <img src="/assets/images/gifBatiment.gif" alt="" class="batiment" />
+            <img src="/assets/images/blob_traits.png" alt="" class="blob_left" />
+            <img src="/assets/images/blob_abilities.png" alt="" class="blob_right" />
         </div>
         <div
             class="hobbies"
             data-component="ChangeText"
             data-texts="les jeux de tables! 🎲, la bonne musique~ 🎶, l'art en général 🖼️, explorer autour... 🐈‍⬛"
+            data-scrolly="fromBottom"
         >
             <h4>Quelques hobbies à moi:</h4>
             <p>J'aime <span class="text">les jeux de tables 🎲</span></p>
@@ -160,8 +161,8 @@
 <section class="projects_list" id="projects">
     <div class="wrapper">
         <div class="title">
-            <h2>Mes Projets</h2>
-            <a href="#contact" class="button">Contact</a>
+            <h2 data-scrolly="fromLeft">Mes Projets</h2>
+            <a href="#contact" class="button" data-scrolly="fromRight">Contact</a>
         </div>
     </div>
     <div class="projects_list_container">
@@ -170,66 +171,76 @@
                 <li>
                     <a href="gabaritProjet.html" class="item">
                         <div class="content">
-                            <p class="project_title">Montage d’une vidéo de présentation pour l’Atim</p>
-                            <div class="content_hover">
+                            <p class="project_title" data-scrolly="fromLeft">
+                                Montage d’une vidéo de présentation pour l’Atim
+                            </p>
+                            <div class="content_hover" data-scrolly="fromLeft">
                                 <h5>Compétence(s): <span>Montage Vidéo</span> 🎥</h5>
                                 <p>Projet <span>scolaire final</span></p>
                             </div>
                             <img src="/assets/images/videoAtim.png" alt="" />
                         </div>
-                        <div href="gabaritProjet.html" class="button">Voir +</div>
+                        <div href="gabaritProjet.html" class="button" data-scrolly="fromRight">Voir +</div>
                     </a>
                 </li>
                 <li>
                     <a href="gabaritProjet.html" class="item">
                         <div class="content">
-                            <p class="project_title">Montage d’une vidéo de présentation pour l’Atim</p>
-                            <div class="content_hover">
+                            <p class="project_title" data-scrolly="fromLeft">
+                                Montage d’une vidéo de présentation pour l’Atim
+                            </p>
+                            <div class="content_hover" data-scrolly="fromLeft">
                                 <h5>Compétence(s): <span>Montage Vidéo</span> 🎥</h5>
                                 <p>Projet <span>scolaire final</span></p>
                             </div>
                             <img src="/assets/images/videoAtim.png" alt="" />
                         </div>
-                        <div href="gabaritProjet.html" class="button">Voir +</div>
+                        <div href="gabaritProjet.html" class="button" data-scrolly="fromRight">Voir +</div>
                     </a>
                 </li>
                 <li>
                     <a href="gabaritProjet.html" class="item">
                         <div class="content">
-                            <p class="project_title">Montage d’une vidéo de présentation pour l’Atim</p>
-                            <div class="content_hover">
+                            <p class="project_title" data-scrolly="fromLeft">
+                                Montage d’une vidéo de présentation pour l’Atim
+                            </p>
+                            <div class="content_hover" data-scrolly="fromLeft">
                                 <h5>Compétence(s): <span>Montage Vidéo</span> 🎥</h5>
                                 <p>Projet <span>scolaire final</span></p>
                             </div>
                             <img src="/assets/images/videoAtim.png" alt="" />
                         </div>
-                        <div href="gabaritProjet.html" class="button">Voir +</div>
+                        <div href="gabaritProjet.html" class="button" data-scrolly="fromRight">Voir +</div>
                     </a>
                 </li>
                 <li>
                     <a href="gabaritProjet.html" class="item">
                         <div class="content">
-                            <p class="project_title">Montage d’une vidéo de présentation pour l’Atim</p>
-                            <div class="content_hover">
+                            <p class="project_title" data-scrolly="fromLeft">
+                                Montage d’une vidéo de présentation pour l’Atim
+                            </p>
+                            <div class="content_hover" data-scrolly="fromLeft">
                                 <h5>Compétence(s): <span>Montage Vidéo</span> 🎥</h5>
                                 <p>Projet <span>scolaire final</span></p>
                             </div>
                             <img src="/assets/images/videoAtim.png" alt="" />
                         </div>
-                        <div href="gabaritProjet.html" class="button">Voir +</div>
+                        <div href="gabaritProjet.html" class="button" data-scrolly="fromRight">Voir +</div>
                     </a>
                 </li>
                 <li>
                     <a href="gabaritProjet.html" class="item">
                         <div class="content">
-                            <p class="project_title">Montage d’une vidéo de présentation pour l’Atim</p>
-                            <div class="content_hover">
+                            <p class="project_title" data-scrolly="fromLeft">
+                                Montage d’une vidéo de présentation pour l’Atim
+                            </p>
+                            <div class="content_hover" data-scrolly="fromLeft">
                                 <h5>Compétence(s): <span>Montage Vidéo</span> 🎥</h5>
                                 <p>Projet <span>scolaire final</span></p>
                             </div>
                             <img src="/assets/images/videoAtim.png" alt="" />
                         </div>
-                        <div href="gabaritProjet.html" class="button">Voir +</div>
+                        <div href="gabaritProjet.html" class="button" data-scrolly="fromRight">Voir +</div>
                     </a>
                 </li>
             </ul>

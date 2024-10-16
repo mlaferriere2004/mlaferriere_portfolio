@@ -4,6 +4,34 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    //background-color: var(--);
+    background-color: rgb(0, 0, 0, 0.7);
     position: fixed;
+    z-index: 15;
+    justify-content: center;
+    align-items: center;
+
+    .modale_container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+        height: 85vh;
+        background-color: var(--color-white);
+        border-radius: 30px;
+        padding: var(--spacing-md);
+
+        p {
+            position: absolute;
+            top: 15%;
+            text-align: center;
+            color: var(--color-interaction);
+            font-weight: bold;
+        }
+    }
+
+    .modale_media {
+        width: 100%;
+        z-index: 1;
+    }
 }

@@ -50,9 +50,15 @@ export default class Header {
   }
 
   initNavMobile() {
-    const toggle = this.element.querySelector('.js-button');
+    const toggleButton = this.element.querySelector('.js-button');
+    const toggleItems = this.element.querySelectorAll('.js-item');
 
-    toggle.addEventListener('click', this.onToggleNav.bind(this));
+    toggleButton.addEventListener('click', this.onToggleNav.bind(this));
+
+    for (let i = 0; i < toggleItems.length; i++) {
+      const Item = toggleItems[i];
+      Item.addEventListener('click', this.onToggleNav.bind(this));
+    }
   }
 
   onToggleNav() {

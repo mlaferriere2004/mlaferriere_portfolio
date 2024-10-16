@@ -2,7 +2,7 @@
     --picture-height: 1000px;
     --space-top: 150px;
     margin-bottom: var(--space-top);
-    overflow-x: hidden;
+    overflow: hidden;
 
     .about {
         display: flex;
@@ -136,38 +136,39 @@
             align-self: flex-end;
             width: 100%;
             overflow: hidden;
-            .blob {
-                width: 70%;
-                position: absolute;
-                right: calc(var(--spacing-xxl) * -1);
-                z-index: -1;
-                top: calc(var(--spacing-xl) / 1.5);
-            }
+        }
+
+        .blob_right {
+            width: 70%;
+            position: absolute;
+            right: calc(var(--spacing-xxl) * -1);
+            z-index: -1;
+            top: calc(var(--spacing-xl) / 1.5);
         }
 
         .traits {
             margin-left: calc(var(--spacing-xl) - 30px);
+        }
 
-            .blob {
-                width: 90%;
+        .batiment {
+            position: absolute;
+            z-index: -2;
+            left: calc(var(--spacing-xl) / -1);
+            top: var(--spacing-xxl);
+
+            @media screen and (max-width: $breakpoint-xl) {
                 position: absolute;
-                z-index: -1;
-                bottom: calc(var(--spacing-xl) * -1.3);
-                left: calc(var(--spacing-xxl) * -1);
+                transform: scale(70%);
+                top: 550px;
             }
+        }
 
-            .batiment {
-                position: absolute;
-                z-index: -2;
-                left: calc(var(--spacing-xl) / -1);
-                top: var(--spacing-xxl);
-
-                @media screen and (max-width: $breakpoint-xl) {
-                    position: absolute;
-                    transform: scale(70%);
-                    top: 550px;
-                }
-            }
+        .blob_left {
+            width: 90%;
+            position: absolute;
+            z-index: -1;
+            bottom: calc(var(--spacing-xl) * -1.3);
+            left: calc(var(--spacing-xxl) * -1);
         }
 
         @media screen and (max-width: $breakpoint-xxl) {
@@ -178,20 +179,16 @@
             gap: var(--spacing-md);
             padding-top: 0;
 
-            .abilities {
-                .blob {
-                    top: calc(var(--spacing-xxxl) * -1);
-                    width: 90%;
-                    right: calc(var(--spacing-md) * -1);
-                }
+            .blob_right {
+                top: calc(var(--spacing-xxxl) * -1);
+                width: 90%;
+                right: calc(var(--spacing-md) * -1);
             }
 
-            .traits {
-                .blob {
-                    bottom: calc(var(--spacing-xxl) * -1);
-                    width: 100%;
-                    left: calc(var(--spacing-md) * -1);
-                }
+            .blob_left {
+                bottom: calc(var(--spacing-xxl) * -1);
+                width: 100%;
+                left: calc(var(--spacing-md) * -1);
             }
 
             .batiment {
@@ -205,20 +202,16 @@
         }
 
         @media screen and (max-width: $breakpoint-xs) {
-            .abilities {
-                .blob {
-                    top: calc(var(--spacing-md) * -1);
-                    width: 90%;
-                    right: calc(var(--spacing-md) * -1);
-                }
+            .blob_right {
+                top: calc(var(--spacing-md) * -1);
+                width: 90%;
+                right: calc(var(--spacing-md) * -1);
             }
 
-            .traits {
-                .blob {
-                    bottom: calc(var(--spacing-md) * -1);
-                    width: 100%;
-                    left: calc(var(--spacing-md) * -1);
-                }
+            .blob_left {
+                bottom: calc(var(--spacing-md) * -1);
+                width: 100%;
+                left: calc(var(--spacing-md) * -1);
             }
         }
     }
