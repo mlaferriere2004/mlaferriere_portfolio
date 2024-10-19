@@ -37,11 +37,12 @@
             height: 20%;
             grid-template-areas: '. . . . . . . button . . . .';
             margin-top: var(--spacing-xxl);
+            position: relative;
+            z-index: 3;
         }
 
         .button {
             grid-area: button;
-            z-index: 2;
         }
 
         @media screen and (max-width: $breakpoint-xxl) {

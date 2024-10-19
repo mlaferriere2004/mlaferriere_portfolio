@@ -57,12 +57,16 @@ export default class Header {
 
     for (let i = 0; i < toggleItems.length; i++) {
       const Item = toggleItems[i];
-      Item.addEventListener('click', this.onToggleNav.bind(this));
+      Item.addEventListener('click', this.removeNav.bind(this));
     }
   }
 
   onToggleNav() {
     this.html.classList.toggle('nav-is-active');
+  }
+
+  removeNav() {
+    this.html.classList.remove('nav-is-active');
   }
 
   changeScrollLimit() {
