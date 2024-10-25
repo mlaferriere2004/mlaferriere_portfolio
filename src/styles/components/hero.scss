@@ -30,6 +30,8 @@
 
             @media screen and (max-width: $breakpoint-md) {
                 display: flex;
+                opacity: 0;
+                z-index: -10;
             }
         }
 
@@ -125,6 +127,10 @@
     .softwares {
         display: flex;
         gap: var(--spacing-md);
+
+        img {
+            max-width: 100px;
+        }
 
         @media screen and (max-width: $breakpoint-sm) {
             gap: var(--spacing-sm);

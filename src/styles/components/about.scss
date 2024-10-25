@@ -32,11 +32,11 @@
         }
 
         .grid_button_about {
-            display: grid;
+            //display: grid;
             grid-template-columns: repeat(12, 1fr);
             height: 20%;
             grid-template-areas: '. . . . . . . button . . . .';
-            margin-top: var(--spacing-xxl);
+            //margin-top: var(--spacing-xxl);
             position: relative;
             z-index: 3;
         }

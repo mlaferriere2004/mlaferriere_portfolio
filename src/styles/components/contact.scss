@@ -2,6 +2,7 @@
     padding: var(--spacing-xl) 0;
     display: flex;
     gap: var(--spacing-md);
+    overflow-x: hidden;
 
     .wrapper {
         max-width: 50%;

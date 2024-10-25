@@ -61,13 +61,11 @@
         max-width: 900px;
 
         img {
-            max-height: var(--slide-height);
             object-fit: cover;
             width: 100%;
-            height: auto;
+            height: 100%;
             display: block;
             border-radius: 15px;
-            min-height: var(--slide-height);
 
             @media screen and (max-width: $breakpoint-lg) {
                 min-height: auto;

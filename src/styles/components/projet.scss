@@ -1,21 +1,43 @@
 .introProject {
+    margin-left: var(--margin-left);
     padding: var(--spacing-xl) 0;
     .context {
         display: flex;
         gap: var(--spacing-md);
-        margin-left: calc(var(--margin-left) * 2);
         padding-bottom: var(--spacing-sm);
+
+        p {
+            max-width: 50%;
+        }
     }
 
-    .video {
-        margin-left: var(--margin-left);
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .button {
+            align-self: center;
+            margin: var(--spacing-xl) 0;
+            max-height: calc(var(--button-size) * 1.4);
+            max-width: calc(var(--button-size) * 1.4);
+            font-size: calc(var(--font-size-button) * 1.5);
+
+            @media screen and (max-width: $breakpoint-sm) {
+                margin: var(--spacing-lg) 0;
+            }
+        }
     }
 
     @media screen and (max-width: $breakpoint-sm) {
+        margin-left: 0;
         padding: var(--spacing-lg) 0 var(--spacing-xl) 0;
 
         .context {
             margin-left: 0;
+            gap: var(--spacing-sm);
+            p {
+                max-width: 100%;
+            }
         }
 
         .video {
@@ -36,7 +58,6 @@
 }
 
 .sectionTitle {
-    margin-left: var(--margin-left);
     position: relative;
 
     @media screen and (max-width: $breakpoint-sm) {
