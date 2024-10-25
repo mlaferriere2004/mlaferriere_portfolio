@@ -82,7 +82,7 @@
 
     .shapes {
         position: absolute;
-        top: -150px;
+        top: -300px;
         left: 0;
         z-index: -1;
 
@@ -97,10 +97,11 @@
 }
 
 .hero_project {
-    height: 90vh;
+    height: 100vh;
     overflow: hidden;
     position: relative;
     top: 0;
+    margin-top: calc(var(--spacing-xl) * -1);
 
     h1 {
         font-size: var(--font-size-titres-liste);
@@ -149,10 +150,12 @@
         position: absolute;
         z-index: -1;
         height: calc(100% + var(--spacing-xl));
-        width: 70%;
+        width: 100%;
         top: 0;
         right: 0;
-        margin-top: calc(var(--spacing-xl) * -1);
+        display: flex;
+        justify-content: flex-end;
+        z-index: -2;
 
         video {
             height: 100%;

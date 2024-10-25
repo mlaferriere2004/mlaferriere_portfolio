@@ -21,9 +21,10 @@
         margin: var(--spacing-xl) 0;
 
         .wrapper {
-            max-width: 1740px;
+            max-width: inherit;
             width: 100%;
             margin-right: 0;
+            margin-left: var(--spacing-xl);
         }
 
         ul {
@@ -73,7 +74,8 @@
                     max-height: 100vh;
                 }
 
-                img {
+                img,
+                video {
                     opacity: 70%;
                     border-radius: 0;
                 }
