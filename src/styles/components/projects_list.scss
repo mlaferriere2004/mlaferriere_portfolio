@@ -21,7 +21,7 @@
         margin: var(--spacing-xl) 0;
 
         .wrapper {
-            max-width: inherit;
+            max-width: -webkit-fill-available;
             width: 100%;
             margin-right: 0;
             margin-left: var(--spacing-xl);
