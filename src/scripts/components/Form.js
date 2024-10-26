@@ -22,10 +22,10 @@ export default class Form {
       }
     }
 
-    this.element.addEventListener('submit', this.onSubmit.bind(this));
+    //this.element.addEventListener('submit', this.onSubmit.bind(this));
   }
 
-  onSubmit(event) {
+  /*onSubmit(event) {
     event.preventDefault();
     console.log('submit');
     if (this.validate()) {
@@ -35,7 +35,7 @@ export default class Form {
     } else {
       console.log('fail');
     }
-  }
+  }*/
 
   /**
    * method description
