@@ -94,7 +94,7 @@
         @media screen and (max-width: $breakpoint-xs) {
             .photo_inline {
                 margin-right: calc(var(--spacing-xl) * -1.25);
-                margin-bottom: calc(var(--spacing-lg) * -2);
+                margin-bottom: calc(var(--spacing-md) * -1);
             }
 
             .about_content {

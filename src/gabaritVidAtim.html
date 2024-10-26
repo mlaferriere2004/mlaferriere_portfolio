@@ -50,7 +50,7 @@
     </div>
 </section>
 
-<section class="steps">
+<section class="steps" data-component="Modale">
     <div class="wrapper">
         <!-- Slider main container -->
         <div class="swiper" data-component="Carousel">
@@ -200,7 +200,7 @@
                         </div>
                     </div>
                     <div class="slide_media" data-scrolly="zoom">
-                        <video autoplay muted loop>
+                        <video autoplay muted loop class="has_modale">
                             <source src="/assets/videos/GifMontageVideoAtim.mp4" type="video/mp4" />
                             <p>
                                 Votre navigateur ne prend pas en charge les vidéos HTML5. Voici
@@ -238,12 +238,12 @@
 </section>
 
 <div class="modale">
-    <div class="modale_container">
+    <div class="modale_container" data-scrolly="zoom">
+        <div class="modale_media"></div>
         <p>
             Le média ne s'affiche pas ou <br />
             tournez votre téléphone en mode paysage
         </p>
-        <img src="" alt="" class="modale_media" />
     </div>
 </div>
 
