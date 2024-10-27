@@ -6,6 +6,7 @@ import Form from './components/Form';
 //import Accordeon from './components/Accordeon';
 import ChangeText from './components/ChangeText';
 import Modale from './components/Modale';
+import ChangeTitle from './components/ChangeTitle';
 
 export default class ComponentFactory {
   constructor() {
@@ -18,6 +19,7 @@ export default class ComponentFactory {
       //Accordeon,
       ChangeText,
       Modale,
+      ChangeTitle,
     };
     this.init();
   }

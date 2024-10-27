@@ -25,6 +25,10 @@
             width: 100%;
             margin-right: 0;
             margin-left: var(--spacing-xl);
+
+            @media screen and (max-width: $breakpoint-md) {
+                margin-left: 0;
+            }
         }
 
         ul {

@@ -22,20 +22,27 @@ export default class Form {
       }
     }
 
-    //this.element.addEventListener('submit', this.onSubmit.bind(this));
+    this.element.addEventListener('submit', this.onSubmit.bind(this));
   }
 
-  /*onSubmit(event) {
-    event.preventDefault();
-    console.log('submit');
-    if (this.validate()) {
-      console.log('success');
-      //envoie ajax du formulaire
-      this.showConfirmation();
+  onSubmit(event) {
+    //event.preventDefault();
+
+    //if (this.validate()) {
+    //console.log('success');
+    //envoie ajax du formulaire
+    //this.showConfirmation();
+    //} else {
+    //console.log('fail');
+    //}
+
+    if (!this.validate()) {
+      event.preventDefault();
+      //console.log('fail');
     } else {
-      console.log('fail');
+      //console.log('success');
     }
-  }*/
+  }
 
   /**
    * method description

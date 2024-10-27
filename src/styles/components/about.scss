@@ -245,7 +245,7 @@
             transition: all 0.5s $ease-out-expo;
             font-size: calc(var(--font-size-h2) / 1.5);
             padding: 45px var(--spacing-md) 0 var(--spacing-md);
-            cursor: pointer;
+            cursor: url(../assets/cursor/cursorPointer.png), pointer;
             width: fit-content;
 
             @media screen and (max-width: $breakpoint-md) {

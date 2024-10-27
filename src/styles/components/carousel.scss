@@ -60,6 +60,7 @@
         height: 100%;
         max-width: 900px;
         overflow: hidden;
+        max-width: 100%;
 
         img {
             object-fit: cover;
@@ -78,6 +79,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            border-radius: 15px;
         }
     }
 
@@ -89,5 +91,6 @@
     @media screen and (max-width: $breakpoint-lg) {
         flex-direction: column;
         justify-content: space-between;
+        gap: 0;
     }
 }
