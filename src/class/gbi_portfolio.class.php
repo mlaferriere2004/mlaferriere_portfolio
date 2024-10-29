@@ -122,8 +122,8 @@ function var_dump_ret($mixed = null) {
         $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
         // En-tête supplémentaire (expéditeur)
-        $headers .= 'From: Portfolio en ligne - Mikaël Laferrière <no-reply-contact@mlaferriere.ca>' . "\r\n";
-        $headers .= 'Reply-To: expediteur@example.com' . "\r\n";
+        $headers .= 'From: ' . self::COURRIEL_FROM . "\r\n";
+        $headers .= 'Reply-To: ' . $this->tim_form_courriel . "\r\n";
 
 
         // Ajouter les adresses en CC et BCC

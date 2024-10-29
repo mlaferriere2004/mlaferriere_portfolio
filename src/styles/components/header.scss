@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     transition: all 0.4s $ease-out-expo;
-    max-height: 120px;
+    max-height: calc(var(--header-height) * 1.5);
 
     @media screen and (min-width: $breakpoint-md) {
         padding: 25px var(--spacing-xl);
