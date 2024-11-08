@@ -13,7 +13,7 @@
     background-color: var(--color-button);
     color: var(--color-lines);
     border: solid 10px var(--color-lines);
-    cursor: pointer;
+    cursor: url(../assets/cursor/cursorPointer.png), pointer;
 
     //font style
     text-transform: uppercase;
